@@ -8,7 +8,6 @@ body {
     background-color: black;
     background-image: url("../images/sky.jpg");
     margin-bottom: 50px;
-    
 }
 
 
@@ -42,18 +41,28 @@ body {
     border-radius: 25px;
 }
 
+#trailer{
+    position: relative;
+    padding-bottom: 56.25%;
+    /* Default for 1600x900 videos 16:9 ratio*/
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+
+
 iframe {
-    width: 90%;
-    width: min-content;
-    display: block;
-    margin: 0 auto;
+    position: absolute;
+    top: 5%;
+    left: 12%;
+    width: 76%;
+    height: 76%;
     border-radius: 25px;
     box-shadow: 0.5px 0.5px 2px 0.5px rgb(255, 0, 0);
 
 }
 
 a :hover{
-    color: var(#1e9bff);
     box-shadow: 1px 1px 5px 5px rgb(255, 0, 0);
 }
 
