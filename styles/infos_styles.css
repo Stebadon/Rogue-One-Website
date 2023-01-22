@@ -1,68 +1,100 @@
-*{
-    margin: 0;
-    padding: 0;
-}
-
 body {
 	font-family: Lato, sans-serif;
-    background-color: rgb(0, 0, 0);
+    background-color: black;
     background-image: url("../images/sky.jpg");
-    
 }
 
-.more {			
-    justify-content: center;
-    align-items: center;
+nav ul{
+    list-style: none;
     display: flex;
     flex-wrap: wrap;
-    row-gap: 50px;
+    justify-content: center;
+    gap: 20px;
+    background-color: rgb(15, 1, 1);
+    padding: 20px;
 }
-.more div {				
-    background-size: cover;
+
+nav a{
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+    position: relative;
+    padding: 3px;
+    font-size: x-large;
+}
+
+nav a:hover{
+    color: rgb(169, 0, 0);
+}
+
+nav a::after{
+    content: '';
+    height: 2px;
+    width: 0%;
+    background-color: rgb(255, 0, 0);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 150ms  ease-in-out;
+}
+
+nav a:hover::after{
+    width: 100%;
+}
+
+.container{
+    padding: 100px 0;
+    background-color: rgba(15, 1, 1, 0.6);
+    display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 30px;
-    margin-left: 30px;
-}
-#character{   
-    display:flex;
-    align-items: center;
-}
-#info{
-    display: flex;
-    align-items: center;
+    gap: 100px;
+    flex-wrap: wrap;
+    margin-top: 50px;
 }
 
-.image{
-    border-radius: 25px;
+.container img{
+    width: 400px;
+    border: 15px solid rgb(255, 0, 0);
+    max-width: calc(90% -30px);
 }
 
-#trailer{
-    position: relative;
-    padding-bottom: 56.25%;
-    /* Default for 1600x900 videos 16:9 ratio*/
-    padding-top: 30px;
-    height: 0;
-    overflow: hidden;
+@media(max-width: 800px){
+    .container{
+        padding: 50px 0;
+        gap: 0px;
+    }
+    .text h2{
+        text-align: center;
+        font-size: 12vw;
+    }
+}
+
+.text{
+    color: rgb(255, 0, 0);
+    max-width: 90%;
+    width: 750px;
+}
+
+.text h2{
+    font-size: 80px;
+}
+
+.text li{
+    text-align: justify;
+    line-height: 175%;
+    font-size: large;
 }
 
 
-iframe {
-    position: absolute;
-    top: 5%;
-    left: 12%;
-    width: 76%;
-    height: 76%;
-    border-radius: 25px;
-    box-shadow: 1px 1px 2px 0.5px rgb(255, 0, 0);
 
-}
 
-a{
+
+
+.footerdiv a{
     text-decoration: none;
 }
 
-a :hover{
+.footerdiv a :hover{
     box-shadow: 1px 1px 5px 5px rgb(255, 0, 0);
 }
 
@@ -133,11 +165,3 @@ footer{
     display: flex;
     align-items: center;
 }
-
-
-
-
-
-
-
-

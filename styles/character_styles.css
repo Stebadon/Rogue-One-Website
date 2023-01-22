@@ -2,5 +2,168 @@ body {
 	font-family: Lato, sans-serif;
     background-color: black;
     background-image: url("../images/sky.jpg");
-    margin-bottom: 50px;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    background-color: rgb(15, 1, 1);
+    padding: 20px;
+}
+
+nav a{
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+    position: relative;
+    padding: 3px;
+    font-size: x-large;
+}
+
+nav a:hover{
+    color: rgb(169, 0, 0);
+}
+
+nav a::after{
+    content: '';
+    height: 2px;
+    width: 0%;
+    background-color: rgb(255, 0, 0);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 150ms  ease-in-out;
+}
+
+nav a:hover::after{
+    width: 100%;
+}
+
+
+
+.container{
+    padding: 100px 0;
+    background-color: rgba(15, 1, 1, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.container img{
+    width: 400px;
+    border: 15px solid rgb(255, 0, 0);
+    max-width: calc(90% -30px);
+}
+
+@media(max-width: 800px){
+    .container{
+        padding: 50px 0;
+        gap: 0px;
+    }
+    .text h2{
+        text-align: center;
+        font-size: 12vw;
+    }
+}
+
+.text{
+    color: rgb(255, 0, 0);
+    max-width: 90%;
+    width: 750px;
+}
+
+.text h2{
+    font-size: 80px;
+}
+
+.text p{
+    text-align: justify;
+    line-height: 175%;
+    font-size: large;
+}
+
+.image{
+    display:flex;
+    align-items: center;
+}
+
+.footerdiv a{
+    text-decoration: none;
+}
+
+.footerdiv a :hover{
+    box-shadow: 1px 1px 5px 5px rgb(255, 0, 0);
+}
+
+footer{
+    margin-top: 50px;
+    background-color: rgb(15, 1, 1);
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+.footerbox{
+    display: flex;
+    justify-content: center;
+    width: 150px;
+    padding: 10px;
+    border: 1px solid rgb(255, 0, 0);
+    border-radius: 25px;
+    margin: 0;
+    color: rgb(255, 0, 0);
+}
+
+.footerdiv{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.htmllinks{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.streaminglinks{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#indexlink{
+    display: flex;
+    align-items: center;
+}
+
+#characterlink{
+    display: flex;
+    align-items: center;
+}
+
+#infolink{
+    display: flex;
+    align-items: center;
+}
+
+#disneylink{
+    display: flex;
+    align-items: center;
+}
+
+#amazonlink{
+    display: flex;
+    align-items: center;
 }
